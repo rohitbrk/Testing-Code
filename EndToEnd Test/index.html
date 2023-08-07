@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <form onsubmit="sum(event)">
+        <label for="firstNumber">Enter First Number: </label>
+        <input type="text" id="firstNumber" />
+        <br />
+        <label for="secondNumber">Enter Second Number: </label>
+        <input type="text" id="secondNumber" />
+        <br />
+        <button type="submit" id="btnResult">sum</button>
+      </form>
+    </div>
+    <script>
+      const sum = (event) => {
+        event.preventDefault();
+        const firstNumber = document.getElementById("firstNumber");
+        const secondNumber = document.getElementById("secondNumber");
+        const resultElement = document.createElement("p");
+
+        result =
+          parseInt(firstNumber.value, 10) + parseInt(secondNumber.value, 10);
+
+        resultElement.textContent = result;
+        document.body.appendChild(resultElement);
+      };
+    </script>
+  </body>
+</html>
